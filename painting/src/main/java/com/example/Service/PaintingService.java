@@ -1,5 +1,7 @@
 package com.example.Service;
 
+import java.util.List;
+
 import com.example.DAO.PaintingDAO;
 import com.example.Model.Painting;
 
@@ -18,8 +20,8 @@ public class PaintingService {
         Painting persistedPainting = paintingDAO.getPaintingById(id);
         return persistedPainting;
     }
-    public Painting getAllPaintings(){
-        return null;
+    public List<Painting> getAllPaintings(){
+        return paintingDAO.getAllPaintings();
     }
 
 }

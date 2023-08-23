@@ -1,5 +1,7 @@
 package com.example.Controller;
 
+import java.util.List;
+
 import com.example.Model.Painting;
 import com.example.Service.PaintingService;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -53,10 +55,12 @@ public class PaintingController {
         }
     }
     public static void getAllHandler(Context ctx){
-
+        List<Painting> allPaintings = paintingService.getAllPaintings();
+        ctx.json(allPaintings);
     }
     public static void getSingleHandler(Context ctx){
-
+        int id = Integer.parseInt(ctx.pathParam("id"));
+    // todo
     }
 
 }
