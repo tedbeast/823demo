@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.Main;
 import com.example.Model.Painting;
 
 public class PaintingDAO {
@@ -53,11 +54,12 @@ public class PaintingDAO {
              * if we dont have a value in the rs, return null
              */
             if(rs.next()){
-                return (new Painting(rs.getInt("id"), rs.getString("title"), rs.getString("author"), rs.getInt("year_made")));
+                return (new Painting(rs.getInt("id"),  rs.getString("author"), rs.getString("title"), rs.getInt("year_made")));
             }else{
                 return null;
             }
         }catch(SQLException e){
+            Main.getLogger().error("user managed to get a sql exception... check this out", e);
             e.printStackTrace();
         }
         return null;
