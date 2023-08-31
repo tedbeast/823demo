@@ -17,6 +17,7 @@ public class PaintingServiceTest {
         // Arrange
         PaintingService paintingService = new PaintingService();
         Painting testPainting = new Painting(1, "test author", "test painting", 2023);
+        
         Painting expectedPainting = new Painting(1, "test author", "test painting", 2023);
         // Act
         Painting actualPainting = paintingService.savePaintingAndReturn(testPainting);
@@ -27,5 +28,5 @@ public class PaintingServiceTest {
     /**
      * Mocking allows us to make fake DAOs, fake sevices, fake controllers, so that the other layers may assume that they act correctly,
      * so that we can build the functionality in a isolated environment
-     */
+     */ 
 }

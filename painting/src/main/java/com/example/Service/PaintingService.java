@@ -26,11 +26,12 @@ public class PaintingService {
         log.info("saving a painting : "+painting);
         return persistedPainting;
     }
-
-    
     public List<Painting> getAllPaintings(){
         log.info("getting all paintings");
         return paintingDAO.getAllPaintings();
     }
-
+    public Painting getPaintingById(int id){
+        log.info("getting painiting by id: "+id);
+        return paintingDAO.getPaintingById(id);
+    }
 }

@@ -76,7 +76,11 @@ public class PaintingController {
     }
     public static void getSingleHandler(Context ctx){
         int id = Integer.parseInt(ctx.pathParam("id"));
-    // todo
+        Painting p = paintingService.getPaintingById(id);
+        if(p == null){
+            ctx.status(404);
+        }else{
+            ctx.json(p);
+        }
     }
-
 }
