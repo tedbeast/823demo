@@ -28,7 +28,7 @@ public class PaintingDAO {
         }
     }
     /**
-     * TODO: refactor to using auto-generated keys
+     * TODO: refactor to using auto-generated key
      * @param painting
      * @return
      */
