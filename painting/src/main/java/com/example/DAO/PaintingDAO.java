@@ -28,7 +28,7 @@ public class PaintingDAO {
         }
     }
     /**
-     * TODO: refactor to using auto-generated keys
+     * TODO: refactor to using auto-generated key
      * @param painting
      * @return
      */
@@ -70,7 +70,7 @@ public class PaintingDAO {
             PreparedStatement ps = conn.prepareStatement("select * from painting");
             ResultSet rs = ps.executeQuery();
             /**
-             * if we dont have a value in the rs, return null
+             * if we dont have a value in the rs, return nul
              */
             while(rs.next()){
                 paintings.add(new Painting(rs.getInt("id"), rs.getString("title"), rs.getString("author"), rs.getInt("year_made")));
